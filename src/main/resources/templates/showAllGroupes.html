@@ -1,0 +1,10 @@
+<div
+th:text = "${ListeGroupes}">
+</div>
+
+<tbody> 
+       <tr th:each="groupe : ${ListeGroupes}">
+        <td><span th:text="${groupe.id}"></span></td>
+        <td><span th:text="${groupe.nom}"></span></td>
+       </tr>
+   </tbody>
