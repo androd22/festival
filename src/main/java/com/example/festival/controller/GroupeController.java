@@ -20,6 +20,13 @@ public class GroupeController {
 	@GetMapping("/getAllGroupes")
 	public String getAllGroupes(Model model){
 		model.addAttribute("ListeGroupes",  groupeService.getAllGroupes());
-		return "showAllGroupes";
+		return "groupe/listGroupe";
+	}
+
+	@GetMapping("new")
+	public String groupNewForm(Model model){
+
+		model.addAttribute("groupe", new Groupe());
+		return "groupe_form";
 	}
 }
